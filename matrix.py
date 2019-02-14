@@ -13,9 +13,10 @@ import math
 #the template in the top comment
 def print_matrix( matrix ):
     for a in range(4):
+	line = ""
         for b in range(len(matrix)):
-            print(str(matrix[b][a]) + "  ")
-        print("\n")
+            line += str(matrix[b][a]) + "  "
+        print(line)
 
 
 #turn the paramter matrix into an identity matrix
