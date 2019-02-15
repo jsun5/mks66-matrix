@@ -33,12 +33,15 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    for a in range(4):
-	    for b in range(len(m2)):
-            linesum = 0
-	        for c in range(4):
-                linesum += temp[b][c]
-            
+	for x in range(len(m2)):
+		temp = []
+		for i in range(4):
+			temp.append(m2[x][i])
+	    for a in range(4):
+            total = 0
+			for c in range(4):
+				total = temp[c] * m1[c][a]
+			m2[x][a] = total
 
 
 
