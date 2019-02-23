@@ -40,7 +40,7 @@ def matrix_mult( m1, m2 ):
         for a in range(4):
             total = 0
             for c in range(4):
-                total = temp[c] * m1[c][a]
+                total += temp[c] * m1[c][a]
             m2[x][a] = total
 
 
