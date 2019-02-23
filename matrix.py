@@ -13,7 +13,7 @@ import math
 #the template in the top comment
 def print_matrix( matrix ):
     for a in range(4):
-	line = ""
+    line = ""
         for b in range(len(matrix)):
             line += str(matrix[b][a]) + "  "
         print(line)
@@ -33,15 +33,15 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-	for x in range(len(m2)):
-		temp = []
-		for i in range(4):
-			temp.append(m2[x][i])
-	    for a in range(4):
+    for x in range(len(m2)):
+        temp = []
+        for i in range(4):
+            temp.append(m2[x][i])
+        for a in range(4):
             total = 0
-			for c in range(4):
-				total = temp[c] * m1[c][a]
-			m2[x][a] = total
+            for c in range(4):
+                total = temp[c] * m1[c][a]
+            m2[x][a] = total
 
 
 
