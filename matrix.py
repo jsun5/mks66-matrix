@@ -13,7 +13,7 @@ import math
 #the template in the top comment
 def print_matrix( matrix ):
     for a in range(4):
-		line = ""
+        line = ""
         for b in range(len(matrix)):
             line += str(matrix[b][a]) + "  "
         print(line)
