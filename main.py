@@ -1,11 +1,35 @@
+import random
 from display import *
 from draw import *
 from matrix import *
 
 screen = new_screen()
-color = [ 0, 255, 0 ]
+color = [ 178, 102, 255 ]
 matrix = new_matrix()
+	
+i = 0
+a = 0
+b = 0
+while i < 100:
+	increment = random.randint(0,100)
+	add_edge(matrix,a+increment,a-increment,0,b-increment,b+increment,0)
+	add_edge(matrix,a-increment,a+increment,0,b+increment,b-increment,0)
+	i+=1
+	a+=random.randint(0,20)
+	b+=random.randint(0,20)
+	
+i = 0
+a = 0
+b = 800
+while i < 100:
+	increment = random.randint(0,100)
+	add_edge(matrix,a+increment,a-increment,0,b-increment,b+increment,0)
+	add_edge(matrix,a-increment,a+increment,0,b+increment,b-increment,0)
+	i+=1
+	a+=random.randint(0,20)
+	b-=random.randint(0,20)
 
+	
 w = 4
 h = 4
 IDENT = [[0 for x in range(w)] for y in range(h)]
@@ -26,3 +50,7 @@ print_matrix(B)
 
 matrix_mult(IDENT,A)
 print_matrix(A)
+
+draw_lines(matrix,screen,color)
+display(screen)
+save_extension(screen, 'img.png')

@@ -10,8 +10,8 @@ def draw_lines( matrix, screen, color ):
         
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
-    matrix.add_point(matrix,x0,y0,z0,1)
-    matrix.add_point(matrix,x1,y1,z1,1)
+    add_point(matrix,x0,y0,z0)
+    add_point(matrix,x1,y1,z1)
     
 
 def add_point( matrix, x, y, z=0 ):
